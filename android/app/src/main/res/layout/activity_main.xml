@@ -1,0 +1,193 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".SampleAppActivity">
+
+        <RelativeLayout
+            android:id="@+id/contentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/centeredContent"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="10"
+                android:gravity="center"
+                android:layout_centerInParent="true">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity=""
+                    android:layout_weight="8"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/facetecLogo"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/facetec_logo"
+                        android:gravity="center"
+                        android:layout_marginBottom="20dp"/>
+
+                    <com.facetec.sampleapp.SampleAppActionButton
+                        android:id="@+id/livenessCheckButton"
+                        android:tag="livenessCheckButton"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:duplicateParentState="false"
+                        android:layout_width="220dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/sample_button_bg"
+                        android:enabled="false"
+                        android:text="@string/liveness_check"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textAlignment="center"
+                        android:textSize="16sp"/>
+
+                    <com.facetec.sampleapp.SampleAppActionButton
+                        android:id="@+id/enrollButton"
+                        android:tag="enrollUserButton"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:duplicateParentState="false"
+                        android:layout_width="220dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/sample_button_bg"
+                        android:enabled="false"
+                        android:text="@string/enroll_simple"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textAlignment="center"
+                        android:textSize="16sp"/>
+
+                    <com.facetec.sampleapp.SampleAppActionButton
+                        android:id="@+id/authButton"
+                        android:tag="authenticateUserButton"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:duplicateParentState="false"
+                        android:layout_width="220dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/sample_button_bg"
+                        android:enabled="false"
+                        android:text="@string/auth_simple"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textAlignment="center"
+                        android:textSize="16sp"/>
+
+                    <com.facetec.sampleapp.SampleAppActionButton
+                        android:id="@+id/identityCheckButton"
+                        android:tag="photoIDMatchButton"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:duplicateParentState="false"
+                        android:layout_width="220dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/sample_button_bg"
+                        android:enabled="false"
+                        android:text="@string/identity_check"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textAlignment="center"
+                        android:textSize="16sp"/>
+
+                    <com.facetec.sampleapp.SampleAppActionButton
+                        android:id="@+id/auditTrailImagesButton"
+                        android:tag="auditTrailButton"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:duplicateParentState="false"
+                        android:layout_width="220dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/sample_button_bg"
+                        android:enabled="false"
+                        android:text="@string/audit_trail"
+                        android:textAllCaps="false"
+                        android:textAlignment="center"
+                        android:textColor="#fff"
+                        android:textSize="12sp"/>
+
+                    <com.facetec.sampleapp.SampleAppActionButton
+                        android:id="@+id/settingsButton"
+                        android:tag="designShowcaseButton"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:duplicateParentState="false"
+                        android:layout_width="220dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/sample_button_bg"
+                        android:enabled="false"
+                        android:text="@string/design_showcase"
+                        android:textAllCaps="false"
+                        android:textColor="#fff"
+                        android:textAlignment="center"
+                        android:textSize="12sp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/centeredContent"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/statusLabel"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:imeOptions="actionDone"
+                    android:lineSpacingMultiplier="1.1"
+                    android:textColor="#417FB2"
+                    android:textSize="12dp"
+                    android:inputType="textMultiLine|textNoSuggestions"/>
+
+            </RelativeLayout>
+
+            <ImageButton
+                android:id="@+id/vocalGuidanceSettingButton"
+                android:layout_height="50dp"
+                android:layout_width="50dp"
+                android:scaleType="centerInside"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:onClick="onVocalGuidanceSettingsButtonPressed"
+                android:layout_alignParentEnd="true"
+                android:background="#00000000"
+                android:src="@drawable/vocal_minimal"
+                style="?android:attr/borderlessButtonStyle"/>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/themeTransitionImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleX="1.1"
+            android:scaleY="1.1"
+            android:scaleType="centerCrop"
+            android:alpha="0"/>
+        <TextView
+            android:id="@+id/themeTransitionText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="#417FB2"
+            android:alpha="0"
+            android:text="@string/transition_loading_text"
+            />
+    </RelativeLayout>
+</layout>
