@@ -4,8 +4,10 @@
 
 # Ignore private FaceTecSDK.framework
 ios/FaceTecSDK.framework
+android/app/libs/facetec-sdk-9.4.6.aar
 # Ignore Generated facetec config you can regenerate all of it for you (https://dev.facetec.com/)
 ios/Config.swift
+android/app/src/main/java/Processors/Config.java
 
 ### ReactNative ###
 # React Native Stack Base
